@@ -1,0 +1,14 @@
+version: '3'
+services:
+  node-app:
+    container_name: my-first-container
+    build: .
+    volumes:
+      - ./src:/app/src:ro
+    ports:
+      - "4000:4000"
+    environment:
+      - port=4000
+      - NODE_env=Production
+    env_file:
+      - ./.env

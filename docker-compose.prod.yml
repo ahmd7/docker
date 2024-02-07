@@ -1,0 +1,11 @@
+version: '3'
+services:
+  node-app:
+    build:
+      context: .
+      target: production
+    ports:
+      - "4001:4000"
+    environment:
+      - NODE_env=Production
+    command: npm run start
