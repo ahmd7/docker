@@ -2,6 +2,7 @@ version: '3'
 services:
   node-app:
     container_name: my-first-container
+    image: vhmds/test-app
     volumes:
       - ./src:/app/src:ro
     env_file:
